@@ -71,7 +71,7 @@ export default {
      * @returns {boolean}
      */
     copyRule() {
-      return true;
+      return this.selectedDiskDriver === 'local' ? true : this.firstItemType === 'file';
     },
 
     /**
@@ -79,7 +79,7 @@ export default {
      * @returns {boolean}
      */
     cutRule() {
-      return true;
+      return this.selectedDiskDriver === 'local' ? true : this.firstItemType === 'file';
     },
 
     /**
@@ -87,7 +87,7 @@ export default {
      * @returns {boolean}
      */
     renameRule() {
-      return !this.multiSelect;
+      return !this.multiSelect && this.selectedDiskDriver === 'local' ? true : this.firstItemType === 'file';
     },
 
     /**
