@@ -1,6 +1,24 @@
 /* eslint-disable object-curly-newline */
 export default {
   /**
+   * Remove image
+   * @param state
+   * @param image
+   */
+  removeImage(state, id) {
+    state.images.splice(state.images.findIndex(image => image.id === id), 1);
+  },
+
+  /**
+   * Set image
+   * @param state
+   * @param image
+   */
+  setImage(state, image) {
+    state.images.push(image);
+  },
+
+  /**
    * Set disks
    * @param state
    * @param disks

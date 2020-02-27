@@ -25,4 +25,7 @@ export default {
 
   // full screen mode
   fullScreen: false,
+
+  // images bucket
+  images: [],
 };

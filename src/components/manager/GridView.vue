@@ -44,6 +44,11 @@
                     {{ `${file.filename}.${file.extension}` }}
                     <br>
                     {{ bytesToHuman(file.size) }}
+                    <button type="button" class="btn btn-secondary"
+                            v-bind:title="'Add'"
+                            v-on:click="setImage(file)">
+                        <i class="fas fa-plus"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -97,6 +102,14 @@ export default {
       if (!extension) return false;
 
       return this.imageExtensions.includes(extension.toLowerCase());
+    },
+
+    /**
+    * commit image file object.
+    * @param file
+    */
+    setImage(file) {
+      this.$store.commit('fm/setImage', file.image);
     },
   },
 };
