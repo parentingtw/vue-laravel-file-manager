@@ -41,14 +41,14 @@
                        v-bind:class="extensionToIcon(file.extension)"></i>
                 </div>
                 <div class="fm-item-info">
-                    {{ `${file.filename}.${file.extension}` }}
-                    <br>
-                    {{ bytesToHuman(file.size) }}
-                    <button type="button" class="btn btn-secondary"
+                    <button type="button" class="btn-sm btn-secondary"
                             v-bind:title="'Add'"
                             v-on:click="setImage(file)">
                         <i class="fas fa-plus"></i>
                     </button>
+                    {{ `${file.filename}.${file.extension}` }}
+                    <br>
+                    {{ bytesToHuman(file.size) }}
                 </div>
             </div>
         </div>

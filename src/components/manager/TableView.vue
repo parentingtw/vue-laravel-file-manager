@@ -71,6 +71,11 @@
                     v-on:contextmenu.prevent="contextMenu(file, $event)">
                     <td class="fm-content-item unselectable"
                         v-bind:class="(acl && file.acl === 0) ? 'text-hidden' : ''">
+                        <button type="button" class="btn-sm btn-secondary mx-2"
+                                v-bind:title="'Add'"
+                                v-on:click="setImage(file)">
+                            <i class="fas fa-plus"></i>
+                        </button>
                         <i class="far" v-bind:class="extensionToIcon(file.extension)"></i>
                         {{ file.filename ? file.filename : file.basename }}
                     </td>
@@ -114,6 +119,14 @@ export default {
      */
     sortBy(field) {
       this.$store.dispatch(`fm/${this.manager}/sortBy`, { field, direction: null });
+    },
+
+    /**
+    * commit image file object.
+    * @param file
+    */
+    setImage(file) {
+      this.$store.commit('fm/setImage', file.image);
     },
   },
 };
