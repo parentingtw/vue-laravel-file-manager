@@ -26,6 +26,7 @@
         <div v-if="showFooter" class="d-flex justify-content-between">
             <span class="d-block">
                 <button class="btn btn-info"
+                        v-if="false"
                         v-bind:title="lang.modal.cropper.title" v-on:click="showCropperModule = true">
                     <i class="fas fa-crop-alt"/>
                 </button>
