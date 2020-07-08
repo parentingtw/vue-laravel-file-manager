@@ -45,6 +45,7 @@
                         <i class="fas fa-upload"/>
                     </button>
                     <button type="button" class="btn btn-secondary"
+                            v-if="false"
                             v-bind:disabled="!isAnyItemSelected"
                             v-on:click="showModal('Delete')"
                             v-bind:title="lang.btn.delete">
@@ -53,18 +54,21 @@
                 </div>
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-secondary"
+                            v-if="false"
                             v-bind:disabled="!isAnyItemSelected"
                             v-bind:title="lang.btn.copy"
                             v-on:click="toClipboard('copy')">
                         <i class="fas fa-copy"/>
                     </button>
                     <button type="button" class="btn btn-secondary"
+                            v-if="false"
                             v-bind:disabled="!isAnyItemSelected"
                             v-bind:title="lang.btn.cut"
                             v-on:click="toClipboard('cut')">
                         <i class="fas fa-cut"/>
                     </button>
                     <button type="button" class="btn btn-secondary"
+                            v-if="false"
                             v-bind:disabled="!clipboardType"
                             v-bind:title="lang.btn.paste"
                             v-on:click="paste">
