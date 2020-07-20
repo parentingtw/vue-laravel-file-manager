@@ -6,7 +6,7 @@ export default {
    * @param image
    */
   removeImage(state, id) {
-    state.images.splice(state.images.findIndex(image => image.id === id), 1);
+    state.images.splice(state.images.findIndex((image) => image.id === id), 1);
   },
 
   /**
@@ -111,4 +111,3 @@ export default {
     state.fullScreen = false;
   },
 };
-
